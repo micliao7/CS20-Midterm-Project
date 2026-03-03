@@ -1,0 +1,59 @@
+{
+    "menu_items": [
+        {
+            "Name": "Midnight Brew",
+            "Description": "A bold, dark roast with notes of chocolate and smoke.",
+            "Category": "Coffee",
+            "Price": "$4.50"
+        },
+        {
+            "Name": "Stardust Latte",
+            "Description": "Espresso, oat milk, and a dusting of edible glitter and cardamom.",
+            "Category": "Coffee",
+            "Price": "$6.50"
+        },
+        {
+            "Name": "Eclipse Mocha",
+            "Description": "Rich dark cocoa, espresso, and a dash of cayenne pepper.",
+            "Category": "Coffee",
+            "Price": "$5.75"
+        },
+        {
+            "Name": "Moonlight Jasmine",
+            "Description": "Organic green tea pearls scented with fresh jasmine blossoms.",
+            "Category": "Tea",
+            "Price": "$5.00"
+        },
+        {
+            "Name": "Velvet Chamomile",
+            "Description": "Soothing chamomile flowers with a hint of honey and lavender.",
+            "Category": "Tea",
+            "Price": "$4.75"
+        },
+        {
+            "Name": "Neon Nights Toast",
+            "Description": "Sourdough with whipped feta, roasted grapes, and thyme.",
+            "Category": "Savory Bites",
+            "Price": "$9.50"
+        },
+        {
+            "Name": "Cosmic Granola Bowl",
+            "Description": "House-made oat cluster granola with Greek yogurt and berry compote.",
+            "Category": "Savory Bites",
+            "Price": "$8.00"
+        },
+        {
+            "Name": "Midnight Macarons",
+            "Description": "A box of three charcoal-infused dark chocolate macarons.",
+            "Category": "Sweets",
+            "Price": "$7.00"
+        },
+        {
+            "Name": "Luna's Moon Pie",
+            "Description": "A gourmet take on the classic: chocolate-dipped marshmallow and graham.",
+            "Category": "Sweets",
+            "Price": "$4.50"
+        }
+    ]
+
+}
