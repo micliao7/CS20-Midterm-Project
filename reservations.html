@@ -5,6 +5,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap">
     <link rel="stylesheet" href="buisness_style.css">
+    <link rel="stylesheet" href="forms.css">
 </head>
 
 <body>
@@ -26,8 +27,57 @@
 
     <div class="body">
         <h1>Reservations</h1>
-        <p>Content placeholder.</p>
+        <p>Book a table at Luna & Leaf.</p>
+
+        <form id="reservationForm" class="reservation-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+                <label for="partySize">Party size</label>
+                <select id="partySize" name="partySize" required>
+                    <option value="">Select...</option>
+                    <option value="1-2">1-2 guests</option>
+                    <option value="3-4">3-4 guests</option>
+                    <option value="5-6">5-6 guests</option>
+                    <option value="7+">7+ guests</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="notes">Special requests</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Dietary needs, allergies, celebration..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit reservation</button>
+        </form>
     </div>
 
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var partySize = document.getElementById('partySize').value;
+
+            if (!name) {
+                alert('Please enter your name.');
+                return;
+            }
+            if (!email) {
+                alert('Please enter your email.');
+                return;
+            }
+            if (!partySize) {
+                alert('Please select party size.');
+                return;
+            }
+
+            alert('Thank you for your reservation! We\'ll confirm by email shortly.');
+        });
+    </script>
 </body>
 </html>
