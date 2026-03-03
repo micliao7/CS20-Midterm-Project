@@ -1,6 +1,6 @@
 To do: 
 
-1. Create a fixed, universal nav that applies to all of the pages
+1. Create a fixed, universal nav that applies to all of the pages (Mickey is working on)
 2. Create a logo for our buisness (can be ai)
 3. Make a hero for the front page. (the front page will be in index.html)
 4. 
