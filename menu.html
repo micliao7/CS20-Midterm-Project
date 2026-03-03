@@ -5,6 +5,32 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap">
     <link rel="stylesheet" href="buisness_style.css">
+
+    <script>
+
+        window.onload = function () {
+            $.get("https://raw.githubusercontent.com/micliao7/CS20-Midterm-Project/refs/heads/main/menu_items.json",
+            function(data) {
+                let str = "";
+                let i = 0;
+                for (let item of data.menu_items) {
+                    str += "<div class='menu_box" + i + "'><h3>" + item.Name + "</h3>"
+                     + "<p>" + item.Description + "</p>"
+                     + "<p>Price: " + item.Price + "</p>"
+                     + "</div>";
+
+                    //iterates between menu_box0 and menu_box1 for styling
+                    if (i == 0) {
+                        i = 1;
+                    } else {
+                        i = 0;
+                    }
+                }
+
+                document.getElementById("menu").innerHTML = str;
+            })
+        }
+    </script>
 </head>
 
 <body>
@@ -26,6 +52,9 @@
 
     <div class="body">
         <h1>Menu</h1>
+        <div id="menu">
+
+        </div>
         <p>Content placeholder.</p>
     </div>
 
