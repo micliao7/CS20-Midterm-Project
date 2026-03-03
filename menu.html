@@ -9,26 +9,38 @@
     <script>
 
         window.onload = function () {
-            $.get("https://raw.githubusercontent.com/micliao7/CS20-Midterm-Project/refs/heads/main/menu_items.json",
-            function(data) {
-                let str = "";
-                let i = 0;
-                for (let item of data.menu_items) {
-                    str += "<div class='menu_box" + i + "'><h3>" + item.Name + "</h3>"
-                     + "<p>" + item.Description + "</p>"
-                     + "<p>Price: " + item.Price + "</p>"
-                     + "</div>";
-
-                    //iterates between menu_box0 and menu_box1 for styling
-                    if (i == 0) {
-                        i = 1;
+            fetch("https://raw.githubusercontent.com/micliao7/CS20-Midterm-Project/refs/heads/main/menu_items.json")
+                .then(response => {
+                    if (!response.ok){
+                        console.log("unable to fetch data");
                     } else {
-                        i = 0;
+                        return response.json();
                     }
-                }
+                })
+                .then(data => {
+                    console.log(data.menu_items);
+                    let str = "";
+                    let i = 0;
+                    for (let item of data.menu_items) {
+                        str += "<div class='menu_box" + i + "'><h3>" + item.Name + "</h3>"
+                        + "<p>" + item.Description + "</p>"
+                        + "<p>Price: " + item.Price + "</p>"
+                        + "</div>";
 
-                document.getElementById("menu").innerHTML = str;
-            })
+                        //iterates between menu_box0 and menu_box1 for styling
+                        if (i == 0) {i = 1;}
+                        else {i = 0;}
+                    }
+
+                    document.getElementById("menu").innerHTML = str;
+                })
+
+
+            /*
+                console.log(data);
+                
+                */
+            
         }
     </script>
 </head>

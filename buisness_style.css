@@ -136,4 +136,8 @@ body {
     background-color: #a8861f;
 }
 
+.menu_box0, .menu_box1 {
+    padding: 10px;
+}
+
 /*This section above is for menu page*/
