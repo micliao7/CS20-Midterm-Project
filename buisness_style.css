@@ -24,6 +24,8 @@
 }
 
 .header {
+    display: flex;
+
     /*This is to ensure that header stays at top*/
     position: sticky;
     top: 0;
@@ -32,6 +34,21 @@
     width: 100%;
     background-color: #ff6262;
     height: 100px;
+}
+
+.header .logo {
+    /*up right down left*/
+    margin: auto 50px auto 20px;
+}
+
+.header .logo a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.header .logo a:hover {
+    text-decoration: none;
+    color: #ffd4d4;
 }
 
 .hero p{
