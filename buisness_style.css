@@ -1,0 +1,39 @@
+.navBar {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+    
+}
+
+.navBar li a {
+    display: block;
+
+    padding: 10px;
+    font-size: 30px;
+    border: 1px solid #ff6262;
+
+    background-color: #c5ff95;
+    text-decoration: none;
+}
+
+.navBar li a:hover {
+    background-color: #a6e374;
+}
+
+.header {
+    /*This is to ensure that header stays at top*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    background-color: #ff6262;
+    height: 100px;
+}
+
+.hero p{
+    font-size: 100px;
+}
