@@ -1,56 +1,127 @@
-.navBar {
-    display: flex;
-
+/* reset everything */
+* {
     margin: 0;
     padding: 0;
-
-    list-style-type: none;
-    
+    box-sizing: border-box;
 }
 
-.navBar li a {
-    display: block;
-
-    padding: 10px;
-    font-size: 30px;
-    border: 1px solid #ff6262;
-
-    background-color: #c5ff95;
-    text-decoration: none;
+/* base styles for the whole page */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background-color: #fff;
+    color: #1a1a1a;
+    line-height: 1.6;
 }
 
-.navBar li a:hover {
-    background-color: #a6e374;
-}
-
+/* sticky header so it stays at the top when you scroll */
 .header {
     display: flex;
-
-    /*This is to ensure that header stays at top*/
+    align-items: center;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 1000;
-
     width: 100%;
-    background-color: #ff6262;
-    height: 100px;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
 }
 
-.header .logo {
-    /*up right down left*/
-    margin: auto 50px auto 20px;
-}
-
-.header .logo a {
+/* logo on the left - image + text, upscale serif font */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     text-decoration: none;
-    color: #ffffff;
+    color: #722f37;
 }
 
-.header .logo a:hover {
+.logo img {
+    height: 6rem;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.logo span {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    color: #5a252c;
+}
+
+/* nav links in the middle, spaced out */
+.navBar {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.navBar a {
     text-decoration: none;
-    color: #ffd4d4;
+    color: #1a1a1a;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-.hero p{
-    font-size: 100px;
+/* nav links stay black, maroon on hover */
+.navBar a:hover {
+    color: #722f37;
+}
+
+/* the reserve button */
+.btn-cta {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #c9a227;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+/* darker gold when you hover over it */
+.btn-cta:hover {
+    background-color: #a8861f;
+}
+
+/* hero section - the main intro area */
+.hero {
+    padding: 60px 40px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+/* main content area, centered with max width */
+.body {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+.body h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/*  softer color for body text */
+.body p {
+    color: #444;
 }
