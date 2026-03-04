@@ -3,6 +3,7 @@
 .reservation-form {
     max-width: 400px;
     margin-top: 2rem;
+    text-align: left;
 }
 
 .form-group {
