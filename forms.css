@@ -1,9 +1,34 @@
 /* form styles - shared across reservation, contact, etc. */
 
+.reservations-intro {
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+.reservations-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.reservation-form-card {
+    background: #fdfbf8;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
 .reservation-form {
-    max-width: 400px;
-    margin-top: 2rem;
+    max-width: 100%;
     text-align: left;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .form-group {
@@ -48,4 +73,50 @@
 
 .btn-submit:hover {
     background-color: #5a252c;
+}
+
+/* reservations sidebar */
+.reservation-sidebar {
+    background: #f8f6f3;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+}
+
+.reservation-sidebar h3 {
+    font-size: 1rem;
+    color: #722f37;
+    margin-bottom: 0.75rem;
+    margin-top: 1rem;
+}
+
+.reservation-sidebar h3:first-child {
+    margin-top: 0;
+}
+
+.reservation-sidebar ul {
+    margin: 0 0 1rem 1.25rem;
+    padding: 0;
+    color: #444;
+    font-size: 0.9rem;
+}
+
+.reservation-sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.reservation-sidebar p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+@media (max-width: 700px) {
+    .reservations-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
 }

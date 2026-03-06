@@ -27,33 +27,60 @@
 
     <div class="body">
         <h1>Reservations</h1>
-        <p>Book a table at Luna & Leaf.</p>
+        <p class="reservations-intro">Secure your spot for weekend brunch, group gatherings, or a quiet corner to work. We'll confirm by email within a few hours.</p>
 
-        <form id="reservationForm" class="reservation-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required placeholder="Your name">
+        <div class="reservations-layout">
+            <div class="reservation-form-card">
+                <form id="reservationForm" class="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Preferred date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred time</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="partySize">Party size</label>
+                        <select id="partySize" name="partySize" required>
+                            <option value="">Select party size...</option>
+                            <option value="1-2">1-2 guests</option>
+                            <option value="3-4">3-4 guests</option>
+                            <option value="5-6">5-6 guests</option>
+                            <option value="7+">7+ guests</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Special requests</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Dietary needs, allergies, celebrating something special? Let us know..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit reservation</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="your@email.com">
-            </div>
-            <div class="form-group">
-                <label for="partySize">Party size</label>
-                <select id="partySize" name="partySize" required>
-                    <option value="">Select...</option>
-                    <option value="1-2">1-2 guests</option>
-                    <option value="3-4">3-4 guests</option>
-                    <option value="5-6">5-6 guests</option>
-                    <option value="7+">7+ guests</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="notes">Special requests</label>
-                <textarea id="notes" name="notes" rows="3" placeholder="Dietary needs, allergies, celebration..."></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Submit reservation</button>
-        </form>
+
+            <aside class="reservation-sidebar">
+                <h3>Good to know</h3>
+                <ul>
+                    <li>Reservations are recommended for weekend brunch and groups of 4+</li>
+                    <li>We hold tables for 15 minutes past your reservation time</li>
+                    <li>Need to change or cancel? Reply to your confirmation email</li>
+                </ul>
+                <h3>Hours</h3>
+                <p>Mon – Fri: 7am – 8pm<br>Sat – Sun: 8am – 6pm</p>
+            </aside>
+        </div>
     </div>
 
     <footer class="footer">
@@ -65,6 +92,8 @@
             e.preventDefault();
             var name = document.getElementById('name').value.trim();
             var email = document.getElementById('email').value.trim();
+            var date = document.getElementById('date').value;
+            var time = document.getElementById('time').value;
             var partySize = document.getElementById('partySize').value;
 
             if (!name) {
@@ -73,6 +102,14 @@
             }
             if (!email) {
                 alert('Please enter your email.');
+                return;
+            }
+            if (!date) {
+                alert('Please select a date.');
+                return;
+            }
+            if (!time) {
+                alert('Please select a time.');
                 return;
             }
             if (!partySize) {
