@@ -1,10 +1,23 @@
 <html>
 <head>
-    <meta name=‘viewport’ content=“width=device-width, initial-scale=1”>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Luna and Leaf, cafe, coffee shop, upscale cafe, workspace cafe, study spot, specialty coffee, reservations">
     <title>Luna & Leaf</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap">
     <link rel="stylesheet" href="buisness_style.css">
+    <style>
+        /* home hero - background image with overlay for readability */
+        .home-hero {
+            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 50%, transparent 70%),
+                        url("images/workspace-2.jpg") no-repeat right center;
+            background-size: cover;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,22 +37,80 @@
         <a href="reservations.html" class="btn-cta">Reserve</a>
     </div>
 
-    <div class="hero">
+    <div class="hero home-hero">
         <h1>Luna & Leaf</h1>
-        
-        <p>This is to simulate how a site scrolls</p>
-        <p>REALLY BIG HELLO WORLDS</p>
-        <p>REALLY BIG HELLO WORLDS</p>
-        <p>REALLY BIG HELLO WORLDS</p>
-        <p>REALLY BIG HELLO WORLDS</p>
-        <p>REALLY BIG HELLO WORLDS</p>
-        <p>REALLY BIG HELLO WORLDS</p>
-        <p>REALLY BIG HELLO WORLDS</p>
-
+        <p class="hero-tagline">An upscale cafe for work and gathering</p>
+        <p class="hero-intro">Specialty coffee, a quiet workspace, and a welcoming atmosphere. Whether you're meeting a client, studying, or catching up with friends, we've got a seat for you.</p>
+        <div class="hero-ctas">
+            <a href="reservations.html" class="btn-cta">Reserve a Table</a>
+            <a href="menu.html" class="btn-secondary">View Menu</a>
+        </div>
     </div>
 
     <div class="body">
+        <section class="home-section">
+            <h2>Why Luna & Leaf</h2>
+            <p>We've built a space that fits how you work and socialize. Here's what sets us apart:</p>
+            <ul class="feature-list">
+                <li>Free WiFi and outlets at every table for remote workers and students</li>
+                <li>Specialty coffee, seasonal drinks, and fresh pastries made daily</li>
+                <li>Quiet zones for focused work, plus livelier areas for group meetings</li>
+                <li>Weekly events including live music, trivia nights, and open mic</li>
+                <li>Reserve a table in advance for busy mornings or weekend brunch</li>
+            </ul>
+        </section>
 
+        <section class="home-section">
+            <h2>Perfect For</h2>
+            <div class="perfect-for-grid">
+                <div class="perfect-for-card">
+                    <h3>Remote Work</h3>
+                    <p>Stable WiFi, comfortable seating, and great coffee. Stay as long as you need.</p>
+                </div>
+                <div class="perfect-for-card">
+                    <h3>Study Sessions</h3>
+                    <p>Quiet corners and plenty of table space. We keep the refills coming.</p>
+                </div>
+                <div class="perfect-for-card">
+                    <h3>Meetings & Catch-ups</h3>
+                    <p>Meet clients or friends in a relaxed, professional setting. Reserve ahead for groups.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-section home-quicklinks">
+            <h2>Explore</h2>
+            <p>Find what you need for your next visit.</p>
+            <div class="quicklinks-grid">
+                <a href="menu.html" class="quicklink-card">
+                    <h3>Menu</h3>
+                    <p>Browse our coffee, food, and pastries. We source quality beans and bake fresh daily.</p>
+                </a>
+                <a href="reservations.html" class="quicklink-card">
+                    <h3>Reservations</h3>
+                    <p>Book a table for your next visit. Recommended for weekend brunch and groups of 4+.</p>
+                </a>
+                <a href="events.html" class="quicklink-card">
+                    <h3>Events</h3>
+                    <p>Trivia, live music, open mic, and more. Check out what's happening this week.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="home-section">
+            <h2>Visit Us</h2>
+            <p>We're open seven days a week. Stop by for coffee, lunch, or an afternoon work session. <a href="locations.html">View full hours and directions</a>.</p>
+            <ul class="hours-preview">
+                <li>Mon - Fri: 7am - 8pm</li>
+                <li>Sat - Sun: 8am - 6pm</li>
+            </ul>
+        </section>
+
+        <section class="home-section home-cta">
+            <h2>Ready to Reserve?</h2>
+            <p>Skip the wait. Book a table for your next coffee run or group gathering.</p>
+            <a href="reservations.html" class="btn-cta">Reserve a Table</a>
+        </section>
     </div>
 
     <footer class="footer">

@@ -106,18 +106,6 @@ body {
 /* hero section - the main intro area */
 .hero {
     padding: 60px 40px;
-
-    /*Hero Image Styling*/
-    background: 
-        linear-gradient(to left, transparent, #ffffff 100%),
-        url("images/workspace-2.jpg");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: right;
-
-
-    /*(remove) This is just for visualization*/
-    border: 1px solid #1a1a1a;
 }
 
 .hero h1 {
@@ -127,6 +115,163 @@ body {
 
 .hero p {
     font-size: 1.25rem;
+}
+
+/* home page hero - background image set via .home-hero internal style */
+.hero-tagline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: #722f37;
+    margin-bottom: 0.75rem;
+}
+
+.hero-intro {
+    max-width: 480px;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid #722f37;
+    color: #722f37;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 8px;
+}
+
+.btn-secondary:hover {
+    background-color: #722f37;
+    color: #fff;
+}
+
+/* home page sections */
+.home-section {
+    margin-bottom: 3rem;
+}
+
+.home-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.home-section p {
+    margin-bottom: 1rem;
+}
+
+.feature-list {
+    margin-left: 1.25rem;
+    color: #444;
+}
+
+.feature-list li {
+    margin-bottom: 0.5rem;
+}
+
+.hours-preview {
+    margin-left: 1.25rem;
+    color: #444;
+}
+
+.hours-preview li {
+    margin-bottom: 0.25rem;
+}
+
+.home-section a {
+    color: #722f37;
+}
+
+.home-section a:hover {
+    text-decoration: underline;
+}
+
+/* perfect for grid */
+.perfect-for-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.perfect-for-card {
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.perfect-for-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    color: #722f37;
+}
+
+.perfect-for-card p {
+    font-size: 0.95rem;
+    color: #444;
+    margin: 0;
+}
+
+/* quick links grid */
+.home-quicklinks h2 {
+    margin-bottom: 0.5rem;
+}
+
+.quicklinks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.quicklink-card {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1a1a1a;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.quicklink-card:hover {
+    border-color: #c9a227;
+    box-shadow: 0 4px 12px rgba(114, 47, 55, 0.1);
+}
+
+.quicklink-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #722f37;
+}
+
+.quicklink-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+}
+
+/* home CTA section */
+.home-cta {
+    text-align: left;
+}
+
+.home-cta .btn-cta {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 700px) {
+    .perfect-for-grid,
+    .quicklinks-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* main content area, left-aligned with max width */
