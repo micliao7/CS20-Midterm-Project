@@ -344,3 +344,52 @@ footer.footer img,
 }
 
 /*This section above is for menu page*/
+
+/*This section below is for contact page*/
+.contacts {
+    display: flex;
+}
+
+.contacts img {
+    width: 100%;
+    height: auto;
+}
+
+.contacts_box {
+    border: 1px solid #a8861f;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    margin: 10px;
+}
+
+.form-group textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: #722f37;
+}
+
+.btn-submit {
+    padding: 12px 24px;
+    background-color: #722f37;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #5a252c;
+}
+/*This section above is for contact page*/
