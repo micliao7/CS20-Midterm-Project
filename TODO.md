@@ -63,14 +63,14 @@
 
 ### Menu (menu.html)
 - [x] Menu loads from JSON (menu_items.json)
-- [ ] Remove "Content placeholder" text
+- [x] Remove "Content placeholder" text
 - [ ] Add menu categories or improve layout
 
 ### About (about.html)
-- [ ] Add cafe story / mission
+- [x] Add cafe story / mission
 - [ ] Add team section (optional — can use array of objects)
-- [ ] Add values or milestones as a list (`<ul>` or `<ol>`)
-- [ ] Remove "Content placeholder"
+- [x] Add values or milestones as a list (`<ul>` or `<ol>`)
+- [x] Remove "Content placeholder"
 
 ### Locations (locations.html)
 - [ ] Add address(es) and hours
@@ -90,14 +90,14 @@
 
 ### Contact (contact.html)
 - [ ] Add contact form OR use for secondary form (spec: form with 3+ element types)
-- [ ] Add address, phone, email
+- [x] Add address, phone, email
 - [ ] Add hours
-- [ ] Remove "Content placeholder"
+- [x] Remove "Content placeholder"
 
 ### Images Needed
 - [x] Banner/hero image (workspace-2.jpg)
 - [x] At least one background image (workspace-2 in hero)
-- [ ] At least 1 more image (need 3 total; have logo + workspace-2)
+- [x] At least 1 more image (need 3 total; have logo + workspace-2)
 - [ ] Ensure file sizes: banner < 120k, others < 50k
 
 ### Footer

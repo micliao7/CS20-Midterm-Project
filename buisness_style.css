@@ -398,3 +398,50 @@ footer.footer img,
     background-color: #5a252c;
 }
 /*This section above is for contact page*/
+
+
+/*This section below is for about page*/
+.aboutUsHero {
+    background-color: #f1d166;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    border: 1px #5a252c solid;
+}
+
+.aboutUsHero h1{
+    font-size: 2rem;
+    color: #722f37;
+    margin: 10%;
+}
+
+#aboutIMG {
+    width: 35%;
+    height: auto;
+    float: right;
+}
+
+.aboutBoxes {
+    margin: 40px 40px;
+}
+
+.aboutBoxes ul {
+    list-style-position: inside; 
+    padding-left: 20px;
+}
+
+.aboutBox0, .aboutBox1 {
+    padding: 30px;
+    border: 1px #5a252c solid;
+}
+
+.aboutBox0 {
+    background-color: #e7c452;
+}
+
+.aboutBox1 {
+    background-color: #c9a227;
+}
+/*This section above is for about page*/
