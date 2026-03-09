@@ -30,9 +30,11 @@ body {
     top: 0;
     z-index: 1000;
     width: 100%;
-    padding: 20px 40px;
+    padding: 15px 40px;
     background-color: #fff;
     border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 /* logo on the left - image + text, upscale serif font */
@@ -45,7 +47,7 @@ body {
 }
 
 .logo img {
-    height: 6rem;
+    height: 5rem;
     width: auto;
     display: block;
     object-fit: contain;
@@ -54,7 +56,7 @@ body {
 
 .logo span {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 600;
     letter-spacing: 0.04em;
     line-height: 1;
@@ -69,8 +71,10 @@ body {
 /* nav links in the middle, spaced out */
 .navBar {
     display: flex;
-    gap: 32px;
+    gap: 24px;
     list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .navBar a {
@@ -78,9 +82,9 @@ body {
     color: #1a1a1a;
     font-size: 1rem;
     font-weight: 500;
+    white-space: nowrap;
 }
 
-/* nav links stay black, maroon on hover */
 .navBar a:hover {
     color: #722f37;
 }
@@ -96,9 +100,9 @@ body {
     font-size: 0.95rem;
     border-radius: 8px;
     transition: background-color 0.2s;
+    white-space: nowrap;
 }
 
-/* darker gold when you hover over it */
 .btn-cta:hover {
     background-color: #a8861f;
 }
@@ -117,7 +121,6 @@ body {
     font-size: 1.25rem;
 }
 
-/* home page hero - background image set via .home-hero internal style */
 .hero-tagline {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 1.5rem;
@@ -267,21 +270,14 @@ body {
     margin-top: 0.5rem;
 }
 
-@media (max-width: 700px) {
-    .perfect-for-grid,
-    .quicklinks-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* main content area, left-aligned with max width */
 .body {
     max-width: 1000px;
-    margin: 40px;
     padding: 40px 20px 80px;
     flex: 1;
     text-align: left;
     margin: 0 auto;
+    width: 100%;
 }
 
 .body h1 {
@@ -291,7 +287,6 @@ body {
     color: #722f37;
 }
 
-/* softer color for body text */
 .body p {
     color: #444;
 }
@@ -324,7 +319,14 @@ footer.footer img,
     margin: 0 auto;
 }
 
-/* this section below is for menu page */
+/* ===== MENU PAGE ===== */
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
 .menu_box0 {
     background-color: #e7c452;
 }
@@ -334,38 +336,76 @@ footer.footer img,
 }
 
 .menu_box0, .menu_box1 {
-    padding: 10px;
-    width: 800px;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 800px;
 }
 
-@media (max-width: 1000px) {
-    .menu_box0, .menu_box1 {
-        width: 600px;
-    }
+.menu_box0 h3, .menu_box1 h3 {
+    color: #722f37;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
-/*This section above is for menu page*/
+.menu_box0 p, .menu_box1 p {
+    margin-bottom: 0.25rem;
+    color: #1a1a1a;
+}
 
-/*This section below is for contact page*/
+/* ===== CONTACT PAGE ===== */
 .contacts {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .contacts img {
     width: 100%;
     height: auto;
-    object-fit: contain
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .contacts_box {
-    width: 50%;
-    height: auto;
+    flex: 1;
+    min-width: 280px;
     padding: 20px;
-    margin: 10px;
+}
+
+.contacts_box h1 {
+    margin-bottom: 1rem;
+}
+
+.contacts_box h3 {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #444;
 }
 
 .form-group {
     margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #722f37;
 }
 
 .form-group textarea {
@@ -376,6 +416,7 @@ footer.footer img,
     font-family: inherit;
     border: 1px solid #ccc;
     border-radius: 6px;
+    resize: vertical;
 }
 
 .form-group textarea:focus {
@@ -392,48 +433,52 @@ footer.footer img,
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .btn-submit:hover {
     background-color: #5a252c;
 }
-/*This section above is for contact page*/
 
-
-/*This section below is for about page*/
+/* ===== ABOUT PAGE ===== */
 .aboutUsHero {
     background-color: #f1d166;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    gap: 20px;
     border: 1px #5a252c solid;
 }
 
-.aboutUsHero h1{
+.aboutUsHero h1 {
     font-size: 2rem;
     color: #722f37;
-    margin: 10%;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
 }
 
 #aboutIMG {
     width: 35%;
+    min-width: 250px;
+    max-width: 400px;
     height: auto;
-    float: right;
+    border-radius: 8px;
 }
 
 .aboutBoxes {
-    margin: 40px 40px;
+    margin: 0;
 }
 
 .aboutBoxes ul {
-    list-style-position: inside; 
+    list-style-position: inside;
     padding-left: 20px;
 }
 
 .aboutBox0, .aboutBox1 {
-    padding: 30px;
+    padding: 30px 40px;
     border: 1px #5a252c solid;
 }
 
@@ -444,4 +489,104 @@ footer.footer img,
 .aboutBox1 {
     background-color: #c9a227;
 }
-/*This section above is for about page*/
+
+.aboutBox0 h3, .aboutBox1 h3 {
+    color: #722f37;
+    margin-bottom: 0.5rem;
+}
+
+.aboutBox0 p, .aboutBox1 p {
+    margin-bottom: 0.75rem;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+@media (max-width: 900px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        height: 4rem;
+    }
+
+    .logo span {
+        font-size: 1.5rem;
+    }
+
+    .navBar {
+        gap: 16px;
+    }
+
+    .aboutUsHero {
+        padding: 20px;
+    }
+
+    .aboutUsHero h1 {
+        font-size: 1.75rem;
+    }
+
+    #aboutIMG {
+        width: 50%;
+    }
+
+    .aboutBox0, .aboutBox1 {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .navBar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .btn-cta {
+        order: 2;
+    }
+
+    .perfect-for-grid,
+    .quicklinks-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts {
+        flex-direction: column;
+    }
+
+    .contacts_box {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .aboutUsHero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutUsHero h1 {
+        margin: 0;
+    }
+
+    #aboutIMG {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .body {
+        padding: 20px 15px 60px;
+    }
+}
