@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta name='viewport' content="width=device-width, initial-scale=1">
@@ -5,7 +6,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap">
     <link rel="stylesheet" href="buisness_style.css">
     <script>
-        window.onload = function() {
+        document.addEventListener("DOMContentLoaded", function() {
             const locations = [
                 {
                     name: "Luna & Leaf - Downtown Crossing",
@@ -63,7 +64,6 @@
                             </div>
                             <a href="reservations.html" class="btn-cta">Reserve at this location</a>
                         </div>
-            <!-- Google Maps Locations -->
                         <div class="location-map">
                             <iframe 
                                 src="${loc.mapEmbed}" 
@@ -79,7 +79,7 @@
                 `;
             }
             document.getElementById("locations-container").innerHTML = html;
-        }
+        });
     </script>
 </head>
 <body>
