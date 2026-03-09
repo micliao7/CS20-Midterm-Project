@@ -499,6 +499,61 @@ footer.footer img,
     margin-bottom: 0.75rem;
 }
 
+/* ===== LOCATIONS PAGE ===== */
+.locations-intro {
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+#locations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.location-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: #fdfbf8;
+    border: 1px solid #eee;
+    border-radius: 12px;
+}
+
+.location-info h2 {
+    font-size: 1.35rem;
+    color: #722f37;
+    margin-bottom: 0.5rem;
+}
+
+.location-address {
+    font-size: 1rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.location-details {
+    margin-bottom: 1.25rem;
+}
+
+.location-details p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.location-map {
+    display: flex;
+    align-items: center;
+}
+
+.location-map iframe {
+    width: 100%;
+    min-height: 220px;
+}
+
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 
 @media (max-width: 900px) {
@@ -532,6 +587,16 @@ footer.footer img,
 
     .aboutBox0, .aboutBox1 {
         padding: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .location-card {
+        grid-template-columns: 1fr;
+    }
+
+    .location-map {
+        order: -1;
     }
 }
 
