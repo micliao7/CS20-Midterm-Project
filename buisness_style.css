@@ -453,60 +453,83 @@ footer.footer img,
 
 /* ===== ABOUT PAGE ===== */
 .aboutUsHero {
-    background-color: #f1d166;
+    position: relative;
+    height: 380px;
+    overflow: hidden;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 20px 40px;
-    flex-wrap: wrap;
-    gap: 20px;
-    border: 1px #5a252c solid;
+    justify-content: center;
+}
+
+.aboutUsHero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(90, 37, 44, 0.6);
+    z-index: 1;
 }
 
 .aboutUsHero h1 {
-    font-size: 2rem;
-    color: #722f37;
-    flex: 1;
-    min-width: 200px;
+    position: relative;
+    z-index: 2;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    color: #fff;
     text-align: center;
+    padding: 0 20px;
 }
 
 #aboutIMG {
-    width: 35%;
-    min-width: 250px;
-    max-width: 400px;
-    height: auto;
-    border-radius: 8px;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .aboutBoxes {
-    margin: 0;
-}
-
-.aboutBoxes ul {
-    list-style-position: inside;
-    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 40px;
 }
 
 .aboutBox0, .aboutBox1 {
-    padding: 30px 40px;
-    border: 1px #5a252c solid;
+    border-radius: 12px;
+    border-left: 4px solid #722f37;
+    padding: 2rem;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
 }
 
 .aboutBox0 {
-    background-color: #e7c452;
+    background: #fff;
 }
 
 .aboutBox1 {
-    background-color: #c9a227;
+    background: #fdf0c0;
 }
 
 .aboutBox0 h3, .aboutBox1 h3 {
+    font-family: 'Playfair Display', Georgia, serif;
     color: #722f37;
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
 }
 
 .aboutBox0 p, .aboutBox1 p {
+    color: #444;
+    margin-bottom: 0.75rem;
+}
+
+.aboutBoxes ul {
+    padding-left: 1.25rem;
+    color: #444;
+}
+
+.aboutBoxes li {
     margin-bottom: 0.75rem;
 }
 
