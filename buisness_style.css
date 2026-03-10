@@ -490,11 +490,17 @@ footer.footer img,
 
 .aboutBoxes {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     max-width: 1100px;
     margin: 0 auto;
     padding: 60px 40px;
+}
+
+@media(max-width: 800px) {
+    .aboutBoxes{
+        max-width: none;
+    }
 }
 
 .aboutBox0, .aboutBox1 {
