@@ -498,18 +498,10 @@ footer.footer img,
 }
 
 .aboutBox0, .aboutBox1 {
+    border: 1px solid #eee;
     border-radius: 12px;
-    border-left: 4px solid #722f37;
     padding: 2rem;
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
-}
-
-.aboutBox0 {
-    background: #fff;
-}
-
-.aboutBox1 {
-    background: #fdf0c0;
+    background-color: #fdfbf8;
 }
 
 .aboutBox0 h3, .aboutBox1 h3 {
